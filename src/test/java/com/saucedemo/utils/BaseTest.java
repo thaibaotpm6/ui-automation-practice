@@ -23,9 +23,9 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
     }
 
-//    @AfterClass
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
 
 }

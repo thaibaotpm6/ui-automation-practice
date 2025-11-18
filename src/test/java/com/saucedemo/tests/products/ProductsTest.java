@@ -68,12 +68,22 @@ public class ProductsTest extends BaseTest {
         }
     }
 
-    @Test(testName = "TC006 - Add single product to cart")
+    @Test(testName = "TC006 - Add a single product to cart and verify cart badge")
     public void testAddSingleProductToCart() {
-        Assert.assertTrue(productsPage.isCartBadgeDisplayed());
-        int addToCartButtonCount = productsPage.getAddToCartButtonCount();
-        for (int i = 0; i < addToCartButtonCount; i++) {
-            Assert.assertEquals(productsPage.getCartBadgeItemCount(i), TestData.EXPECTED_SINGLE_CART_BADGE);
+        productsPage.addProductToCart(0); // Add the first product to the cart
+        Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding the product");
+        Assert.assertEquals(productsPage.getRemoveButtonText(0), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for the product");
+        Assert.assertEquals(productsPage.getCartBadgeItemCount(), 1, "Cart badge count mismatch after adding the product");
+    }
+
+    @Test(testName = "TC007 - Add multiple products to cart and verify cart badge")
+    public void testAddMultipleProductToCart() {
+        int productCount = productsPage.getProductCount();
+        for (int i = 0; i < productCount; i++) {
+            productsPage.addProductToCart(i);
+            Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding product " + i);
+            Assert.assertEquals(productsPage.getRemoveButtonText(i), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for product " + i);
+            Assert.assertEquals(productsPage.getCartBadgeItemCount(), i+1, "Cart badge count mismatch after adding product " + i);
         }
     }
 }

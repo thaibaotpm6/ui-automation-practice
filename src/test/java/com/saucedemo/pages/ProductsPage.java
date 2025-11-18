@@ -1,6 +1,5 @@
 package com.saucedemo.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -134,19 +133,19 @@ public class ProductsPage extends BasePage {
         return addToCartButtons.size();
     }
 
-    public boolean isCartBadgeDisplayed() {
-        for (int i = 0; i < getAddToCartButtonCount(); i++) {
-            addToCartButtons.get(i).click();
-            if (!cartBadge.isDisplayed()) {
-                return false;
-            }
-            addToCartButtons.get(i).click();
-        }
-        return true;
+    public void addProductToCart(int index) {
+        addToCartButtons.get(index).click();
     }
 
-    public int getCartBadgeItemCount(int i) {
-        addToCartButtons.get(i).click();
+    public boolean isCartBadgeDisplayed() {
+        return cartBadge.isDisplayed();
+    }
+
+    public String getRemoveButtonText(int index) {
+        return addToCartButtons.get(index).getText();
+    }
+
+    public int getCartBadgeItemCount() {
         return Integer.parseInt(cartBadge.getText());
     }
 }
