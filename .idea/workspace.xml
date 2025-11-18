@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="97099ac4-7bd2-4a72-9699-4f12881b8910" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="35N9A9aZ6Atbdw9vEuJEtzi1QkH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.LoginTest.testLoginErrorMessage.executor": "Run",
+    "TestNG.LoginTest.testLoginPageElementsVisibility.executor": "Run",
+    "TestNG.LoginTest.testLoginSuccess.executor": "Run",
+    "TestNG.LoginTest.testLoginSuccessfully.executor": "Run",
+    "TestNG.LoginTest.testLoginWithEmptyUsername.executor": "Run",
+    "TestNG.LoginTest.testLoginWithErrorUser.executor": "Run",
+    "TestNG.LoginTest.testLoginWithInvalidCredentials.executor": "Run",
+    "TestNG.LoginTest.testLoginWithInvalidPassword.executor": "Run",
+    "TestNG.LoginTest.testLoginWithInvalidUsername.executor": "Run",
+    "TestNG.LoginTest.testLoginWithLockedOutUser.executor": "Run",
+    "TestNG.LoginTest.testLoginWithPerformanceGlitchUser.executor": "Run",
+    "TestNG.LoginTest.testLoginWithProblemUser.executor": "Run",
+    "TestNG.LoginTest.testLoginWithStandardUser.executor": "Run",
+    "TestNG.LoginTest.testLoginWithVisualUser.executor": "Run",
+    "TestNG.ProductsTest.executor": "Run",
+    "TestNG.ProductsTest.testAddSingleProductToCart.executor": "Run",
+    "TestNG.ProductsTest.testAllProductsAreDisplayed.executor": "Run",
+    "TestNG.ProductsTest.testLoginSuccessfully.executor": "Run",
+    "TestNG.ProductsTest.testProductDescriptionsAreDisplayed.executor": "Run",
+    "TestNG.ProductsTest.testProductNamesAreDisplayed.executor": "Run",
+    "TestNG.ProductsTest.testProductPricesAreDisplayed.executor": "Run",
+    "TestNG.ProductsTest.testProductsPageLoadsSuccessfully.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/baothai/IdeaProjects/SauceDemo/src/test/java",
+    "onboarding.tips.debug.path": "C:/Users/baothai/IdeaProjects/SauceDemo/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.editor"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\baothai\IdeaProjects\SauceDemo\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ProductsTest.testAddSingleProductToCart">
+    <configuration name="LoginTest.testLoginWithEmptyUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.login.LoginTest" />
+      <option name="METHOD_NAME" value="testLoginWithEmptyUsername" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.testLoginWithInvalidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.login.LoginTest" />
+      <option name="METHOD_NAME" value="testLoginWithInvalidCredentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTest.testAddSingleProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
+      <option name="METHOD_NAME" value="testAddSingleProductToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTest.testAllProductsAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
+      <option name="METHOD_NAME" value="testAllProductsAreDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ProductsTest.testAddSingleProductToCart" />
+        <item itemvalue="TestNG.ProductsTest" />
+        <item itemvalue="TestNG.ProductsTest.testAllProductsAreDisplayed" />
+        <item itemvalue="TestNG.LoginTest.testLoginWithEmptyUsername" />
+        <item itemvalue="TestNG.LoginTest.testLoginWithInvalidCredentials" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97099ac4-7bd2-4a72-9699-4f12881b8910" name="Changes" comment="" />
+      <created>1762939516433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762939516433</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
