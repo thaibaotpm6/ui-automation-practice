@@ -76,8 +76,8 @@ public class ProductsTest extends BaseTest {
         Assert.assertEquals(productsPage.getCartBadgeItemCount(), 1, "Cart badge count mismatch after adding the product");
     }
 
-    @Test(testName = "TC007 - Add multiple products to cart and verify cart badge")
-    public void testAddMultipleProductToCart() {
+    @Test(testName = "TC007 - Add all products to cart and verify cart badge")
+    public void testAddAllProductsToCartAndVerifyCartBadge() {
         int productCount = productsPage.getProductCount();
         for (int i = 0; i < productCount; i++) {
             productsPage.addProductToCart(i);
