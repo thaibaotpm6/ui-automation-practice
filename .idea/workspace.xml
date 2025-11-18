@@ -40,45 +40,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.LoginTest.testLoginErrorMessage.executor": "Run",
-    "TestNG.LoginTest.testLoginPageElementsVisibility.executor": "Run",
-    "TestNG.LoginTest.testLoginSuccess.executor": "Run",
-    "TestNG.LoginTest.testLoginSuccessfully.executor": "Run",
-    "TestNG.LoginTest.testLoginWithEmptyUsername.executor": "Run",
-    "TestNG.LoginTest.testLoginWithErrorUser.executor": "Run",
-    "TestNG.LoginTest.testLoginWithInvalidCredentials.executor": "Run",
-    "TestNG.LoginTest.testLoginWithInvalidPassword.executor": "Run",
-    "TestNG.LoginTest.testLoginWithInvalidUsername.executor": "Run",
-    "TestNG.LoginTest.testLoginWithLockedOutUser.executor": "Run",
-    "TestNG.LoginTest.testLoginWithPerformanceGlitchUser.executor": "Run",
-    "TestNG.LoginTest.testLoginWithProblemUser.executor": "Run",
-    "TestNG.LoginTest.testLoginWithStandardUser.executor": "Run",
-    "TestNG.LoginTest.testLoginWithVisualUser.executor": "Run",
-    "TestNG.ProductsTest.executor": "Run",
-    "TestNG.ProductsTest.testAddSingleProductToCart.executor": "Run",
-    "TestNG.ProductsTest.testAllProductsAreDisplayed.executor": "Run",
-    "TestNG.ProductsTest.testLoginSuccessfully.executor": "Run",
-    "TestNG.ProductsTest.testProductDescriptionsAreDisplayed.executor": "Run",
-    "TestNG.ProductsTest.testProductNamesAreDisplayed.executor": "Run",
-    "TestNG.ProductsTest.testProductPricesAreDisplayed.executor": "Run",
-    "TestNG.ProductsTest.testProductsPageLoadsSuccessfully.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/baothai/IdeaProjects/SauceDemo/src/test/java",
-    "onboarding.tips.debug.path": "C:/Users/baothai/IdeaProjects/SauceDemo/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginErrorMessage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginPageElementsVisibility.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginSuccess.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithEmptyUsername.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithErrorUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithInvalidCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithInvalidPassword.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithInvalidUsername.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithLockedOutUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithPerformanceGlitchUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithProblemUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithStandardUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginTest.testLoginWithVisualUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testAddSingleProductToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testAllProductsAreDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testLoginSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testProductDescriptionsAreDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testProductNamesAreDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testProductPricesAreDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProductsTest.testProductsPageLoadsSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/baothai/IdeaProjects/SauceDemo/src/test/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/baothai/IdeaProjects/SauceDemo/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\baothai\IdeaProjects\SauceDemo\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ProductsTest.testAddSingleProductToCart">
+  <component name="RunManager" selected="TestNG.ProductsTest.testProductPricesAreDisplayed">
     <configuration name="LoginTest.testLoginWithEmptyUsername" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemo" />
       <extension name="coverage">
@@ -90,24 +90,6 @@
       <option name="PACKAGE_NAME" value="com.saucedemo.tests.login" />
       <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.login.LoginTest" />
       <option name="METHOD_NAME" value="testLoginWithEmptyUsername" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.testLoginWithInvalidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SauceDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.saucedemo.tests.login.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.saucedemo.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.login.LoginTest" />
-      <option name="METHOD_NAME" value="testLoginWithInvalidCredentials" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -168,13 +150,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductsTest.testProductPricesAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
+      <option name="METHOD_NAME" value="testProductPricesAreDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductsTest.testProductPricesAreDisplayed" />
         <item itemvalue="TestNG.ProductsTest.testAddSingleProductToCart" />
         <item itemvalue="TestNG.ProductsTest" />
         <item itemvalue="TestNG.ProductsTest.testAllProductsAreDisplayed" />
         <item itemvalue="TestNG.LoginTest.testLoginWithEmptyUsername" />
-        <item itemvalue="TestNG.LoginTest.testLoginWithInvalidCredentials" />
       </list>
     </recent_temporary>
   </component>
