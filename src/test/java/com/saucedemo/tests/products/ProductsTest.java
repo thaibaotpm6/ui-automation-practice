@@ -128,7 +128,7 @@ public class ProductsTest extends BaseTest {
         productsPage.sortProducts(TestData.SORT_BY_NAME_ASC);
         List<String> actualSortedNames = productsPage.getAllProductNames();
         List<String> expectedSortedNames = productsPage.getProductNamesSortedAlphabetically(TestData.EXPECTED_PRODUCT_NAMES);
-        Assert.assertEquals(actualSortedNames, expectedSortedNames);
+        Assert.assertEquals(actualSortedNames, expectedSortedNames, "Product names are not sorted alphabetically (A to Z)");
     }
 
     @Test(testName = "TC011 - Verify sorting of products by Name (Z to A)")
@@ -136,15 +136,14 @@ public class ProductsTest extends BaseTest {
         productsPage.sortProducts(TestData.SORT_BY_NAME_DESC);
         List<String> actualSortedNames = productsPage.getAllProductNames();
         List<String> expectedSortedNames = productsPage.getProductNamesSortedReverseAlphabetically(TestData.EXPECTED_PRODUCT_NAMES);
-        Assert.assertEquals(actualSortedNames, expectedSortedNames);
-    }
+        Assert.assertEquals(actualSortedNames, expectedSortedNames, "Product names are not sorted alphabetically (Z to A)");    }
 
     @Test(testName = "TC012 - Verify sorting of products by Price (low to high)")
     public void testSortProductsByPriceLowToHigh() {
         productsPage.sortProducts(TestData.SORT_BY_PRICE_ASC);
         List<String> actualSortedPrices = productsPage.getAllProductPrices();
         List<String> expectedSortedPrices = productsPage.getProductPricesSortedLowToHigh(TestData.EXPECTED_PRODUCT_PRICES);
-        Assert.assertEquals(actualSortedPrices, expectedSortedPrices);
+        Assert.assertEquals(actualSortedPrices, expectedSortedPrices, "Product prices are not sorted correctly (low to high)");
     }
 
     @Test(testName = "TC013 - Verify sorting of products by Price (high to low)")
@@ -152,6 +151,5 @@ public class ProductsTest extends BaseTest {
         productsPage.sortProducts(TestData.SORT_BY_PRICE_DESC);
         List<String> actualSortedPrices = productsPage.getAllProductPrices();
         List<String> expectedSortedPrices = productsPage.getProductPricesSortedHighToLow(TestData.EXPECTED_PRODUCT_PRICES);
-        Assert.assertEquals(actualSortedPrices, expectedSortedPrices);
-    }
+        Assert.assertEquals(actualSortedPrices, expectedSortedPrices, "Product prices are not sorted correctly (high to low)");    }
 }
