@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b82369c3-a97d-4a85-81ce-42ca1a672493" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b82369c3-a97d-4a85-81ce-42ca1a672493" name="Changes" comment="#Comment: Set up SauceDemo project with UI automation testing framework">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/data/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/products/ProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/products/ProductsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +33,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "TestNG.ProductsTest.testAddMultipleProductToCart.executor": "Run",
     "TestNG.ProductsTest.testAddProductsToCart.executor": "Run",
     "TestNG.ProductsTest.testAddSingleProductToCart.executor": "Run",
@@ -149,6 +145,27 @@
       <option name="presentableId" value="Default" />
       <updated>1763436855428</updated>
     </task>
+    <task id="LOCAL-00001" summary="#Comment: Set up SauceDemo project with UI automation testing framework">
+      <option name="closed" value="true" />
+      <created>1763460732273</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763460732273</updated>
+    </task>
+    <task id="LOCAL-00002" summary="#Comment: Set up SauceDemo project with UI automation testing framework">
+      <option name="closed" value="true" />
+      <created>1763460946142</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763460946142</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#Comment: Set up SauceDemo project with UI automation testing framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Comment: Set up SauceDemo project with UI automation testing framework" />
   </component>
 </project>

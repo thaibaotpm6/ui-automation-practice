@@ -23,32 +23,32 @@ public class ProductsTest extends BaseTest {
     @Test(testName = "TC002 - Verify all 6 products are displayed")
     public void testAllProductsAreDisplayed() {
         int actualProductCount = productsPage.getProductCount();
-        Assert.assertEquals(actualProductCount, TestData.EXPECTED_PRODUCT_COUNT);
+        Assert.assertEquals(actualProductCount, TestData.EXPECTED_PRODUCT_COUNT, "Mismatch in the number of products displayed");
 
-        Assert.assertTrue(productsPage.areAllProductsDisplayed());
+        Assert.assertTrue(productsPage.areAllProductsDisplayed(), "Not all products are displayed");
 
-        Assert.assertTrue(productsPage.areAllProductNamesDisplayed());
+        Assert.assertTrue(productsPage.areAllProductNamesDisplayed(), "Not all product names are displayed");
         List<String> actualProductNames = productsPage.getAllProductNames();
-        Assert.assertEquals(actualProductNames, TestData.EXPECTED_PRODUCT_NAMES);
+        Assert.assertEquals(actualProductNames, TestData.EXPECTED_PRODUCT_NAMES, "Mismatch in product names");
 
-        Assert.assertTrue(productsPage.areAllProductDescriptionsDisplayed());
+        Assert.assertTrue(productsPage.areAllProductDescriptionsDisplayed(), "Not all product descriptions are displayed");
         List<String> actualProductDescriptions = productsPage.getAllproductDescriptions();
-        Assert.assertEquals(actualProductDescriptions, TestData.EXPECTED_PRODUCT_DESCRIPTIONS);
+        Assert.assertEquals(actualProductDescriptions, TestData.EXPECTED_PRODUCT_DESCRIPTIONS, "Mismatch in product descriptions");
 
-        Assert.assertTrue(productsPage.areAllProductPricesDisplayed());
+        Assert.assertTrue(productsPage.areAllProductPricesDisplayed(), "Not all product prices are displayed");
         List<String> actualProductPrices = productsPage.getAllProductPrices();
-        Assert.assertEquals(actualProductPrices, TestData.EXPECTED_PRODUCT_PRICES);
+        Assert.assertEquals(actualProductPrices, TestData.EXPECTED_PRODUCT_PRICES, "Mismatch in product prices");
 
-        Assert.assertTrue(productsPage.areAllProductImagesDisplayed());
+        Assert.assertTrue(productsPage.areAllProductImagesDisplayed(), "Not all product images are displayed");
 
-        Assert.assertTrue(productsPage.areAllAddToCartButtonsDisplayed());
+        Assert.assertTrue(productsPage.areAllAddToCartButtonsDisplayed(), "Not all 'Add to Cart' buttons are displayed");
     }
 
     @Test(testName = "TC003 - Verify product names are displayed correctly")
     public void testProductNamesAreDisplayed() {
         List<String> actualProductNames = productsPage.getAllProductNames();
         for (int i = 0; i < actualProductNames.size(); i++) {
-            Assert.assertEquals(actualProductNames.get(i), (TestData.EXPECTED_PRODUCT_NAMES).get(i));
+            Assert.assertEquals(actualProductNames.get(i), (TestData.EXPECTED_PRODUCT_NAMES).get(i), "Mismatch in product name at index " + i);
         }
     }
 
@@ -56,7 +56,7 @@ public class ProductsTest extends BaseTest {
     public void testProductDescriptionsAreDisplayed() {
         List<String> actualProductDescriptions = productsPage.getAllproductDescriptions();
         for (int i = 0; i < actualProductDescriptions.size(); i++) {
-            Assert.assertEquals(actualProductDescriptions.get(i), (TestData.EXPECTED_PRODUCT_DESCRIPTIONS).get(i));
+            Assert.assertEquals(actualProductDescriptions.get(i), (TestData.EXPECTED_PRODUCT_DESCRIPTIONS).get(i), "Mismatch in product description at index " + i);
         }
     }
 
@@ -64,7 +64,7 @@ public class ProductsTest extends BaseTest {
     public void testProductPricesAreDisplayed() {
         List<String> actualProductPrices = productsPage.getAllProductPrices();
         for (int i = 0; i < actualProductPrices.size(); i++) {
-            Assert.assertEquals(actualProductPrices.get(i), (TestData.EXPECTED_PRODUCT_PRICES).get(i));
+            Assert.assertEquals(actualProductPrices.get(i), (TestData.EXPECTED_PRODUCT_PRICES).get(i), "Mismatch in product price at index " + i);
         }
     }
 
@@ -83,7 +83,7 @@ public class ProductsTest extends BaseTest {
             productsPage.addProductToCart(i);
             Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding product " + i);
             Assert.assertEquals(productsPage.getRemoveButtonText(i), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for product " + i);
-            Assert.assertEquals(productsPage.getCartBadgeItemCount(), i+1, "Cart badge count mismatch after adding product " + i);
+            Assert.assertEquals(productsPage.getCartBadgeItemCount(), i + 1, "Cart badge count mismatch after adding product " + i);
         }
     }
 }
