@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b82369c3-a97d-4a85-81ce-42ca1a672493" name="Changes" comment="#Comment: Set up SauceDemo project with UI automation testing framework">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/data/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/login/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/products/ProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/tests/products/ProductsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/utils/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +39,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.ProductsTest.executor": "Run",
+    "TestNG.ProductsTest.testAddAllProductsToCartAndVerifyCartBadge.executor": "Run",
     "TestNG.ProductsTest.testAddMultipleProductToCart.executor": "Run",
     "TestNG.ProductsTest.testAddProductsToCart.executor": "Run",
     "TestNG.ProductsTest.testAddSingleProductToCart.executor": "Run",
+    "TestNG.ProductsTest.testAddToCartButtonChangesToRemove.executor": "Run",
+    "TestNG.ProductsTest.testAddToCartButtonToggleBehavior.executor": "Run",
+    "TestNG.ProductsTest.testAddToCartButtonToggleMultipleProducts.executor": "Run",
     "TestNG.ProductsTest.testProductPricesAreDisplayed.executor": "Run",
+    "TestNG.ProductsTest.testSortProductsByNameAToZ.executor": "Run",
+    "TestNG.ProductsTest.testSortProductsByNameZToA.executor": "Run",
+    "TestNG.ProductsTest.testSortProductsByPriceHighToLow.executor": "Run",
+    "TestNG.ProductsTest.testSortProductsByPriceLowToHigh.executor": "Run",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.ProductsTest.testAddMultipleProductToCart">
+  <component name="RunManager" selected="TestNG.ProductsTest.testSortProductsByPriceHighToLow">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ui-automation-practice-ver2" />
       <method v="2">
@@ -55,7 +70,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsTest.testAddMultipleProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.login.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemo" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +97,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
       <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
-      <option name="METHOD_NAME" value="testAddMultipleProductToCart" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTest.testSortProductsByNameZToA" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
+      <option name="METHOD_NAME" value="testSortProductsByNameZToA" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -73,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsTest.testAddProductsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsTest.testSortProductsByPriceHighToLow" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemo" />
       <extension name="coverage">
         <pattern>
@@ -83,7 +132,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
       <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
-      <option name="METHOD_NAME" value="testAddProductsToCart" />
+      <option name="METHOD_NAME" value="testSortProductsByPriceHighToLow" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsTest.testAddSingleProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsTest.testSortProductsByPriceLowToHigh" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SauceDemo" />
       <extension name="coverage">
         <pattern>
@@ -101,25 +150,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
       <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
-      <option name="METHOD_NAME" value="testAddSingleProductToCart" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductsTest.testProductPricesAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SauceDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.saucedemo.tests.products.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.saucedemo.tests.products" />
-      <option name="MAIN_CLASS_NAME" value="com.saucedemo.tests.products.ProductsTest" />
-      <option name="METHOD_NAME" value="testProductPricesAreDisplayed" />
+      <option name="METHOD_NAME" value="testSortProductsByPriceLowToHigh" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -129,10 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProductsTest.testAddMultipleProductToCart" />
-        <item itemvalue="TestNG.ProductsTest.testAddSingleProductToCart" />
-        <item itemvalue="TestNG.ProductsTest.testAddProductsToCart" />
-        <item itemvalue="TestNG.ProductsTest.testProductPricesAreDisplayed" />
+        <item itemvalue="TestNG.ProductsTest.testSortProductsByPriceHighToLow" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.ProductsTest" />
+        <item itemvalue="TestNG.ProductsTest.testSortProductsByPriceLowToHigh" />
+        <item itemvalue="TestNG.ProductsTest.testSortProductsByNameZToA" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763460946142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#Comment: Set up SauceDemo project with UI automation testing framework">
+      <option name="closed" value="true" />
+      <created>1763519937297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763519937297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

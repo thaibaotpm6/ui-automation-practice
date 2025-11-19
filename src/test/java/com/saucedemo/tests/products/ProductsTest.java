@@ -68,22 +68,90 @@ public class ProductsTest extends BaseTest {
         }
     }
 
-    @Test(testName = "TC006 - Add a single product to cart and verify cart badge")
-    public void testAddSingleProductToCart() {
+    @Test(testName = "TC006 - Verify adding a single product to cart and verify cart badge")
+    public void testAddSingleProductToCartAndVerifyCartBadge() {
         productsPage.addProductToCart(0); // Add the first product to the cart
         Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding the product");
-        Assert.assertEquals(productsPage.getRemoveButtonText(0), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for the product");
+        Assert.assertEquals(productsPage.getCartButtonText(0), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for the product");
         Assert.assertEquals(productsPage.getCartBadgeItemCount(), 1, "Cart badge count mismatch after adding the product");
     }
 
-    @Test(testName = "TC007 - Add all products to cart and verify cart badge")
+    @Test(testName = "TC007 - Verify adding all products to cart updates the cart badge correctly")
     public void testAddAllProductsToCartAndVerifyCartBadge() {
         int productCount = productsPage.getProductCount();
         for (int i = 0; i < productCount; i++) {
-            productsPage.addProductToCart(i);
+            productsPage.addProductToCart(i); // Add the product to the cart and verify the cart badge and button text
             Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding product " + i);
-            Assert.assertEquals(productsPage.getRemoveButtonText(i), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for product " + i);
             Assert.assertEquals(productsPage.getCartBadgeItemCount(), i + 1, "Cart badge count mismatch after adding product " + i);
+            Assert.assertEquals(productsPage.getCartButtonText(i), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for product " + i);
         }
+    }
+
+    @Test(testName = "TC008 - Verify Add to Cart button toggles to Remove and back to Add for single product")
+    public void testAddToCartButtonToggleBehavior() {
+        productsPage.addProductToCart(0); // Add the first product to the cart
+        Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding the product");
+        Assert.assertEquals(productsPage.getCartBadgeItemCount(), 1, "Cart badge count mismatch after adding the product");
+        Assert.assertEquals(productsPage.getCartButtonText(0), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for the product");
+
+        productsPage.removeProductFromCart(0); // Remove the first product from the cart
+        Assert.assertFalse(productsPage.isCartBadgeDisplayed(), "Cart badge is still displayed after removing the product");
+        Assert.assertEquals(productsPage.getCartButtonText(0), TestData.ADD_TO_CART_BUTTON_TEXT, "Add to Cart button text mismatch after removing the product");
+    }
+
+    @Test(testName = "TC009 - Verify Add to Cart button toggles to Remove and back to Add for multiple products")
+    public void testAddToCartButtonToggleMultipleProducts() {
+        int productCount = productsPage.getProductCount();
+
+        for (int i = 0; i < productCount; i++) {
+            productsPage.addProductToCart(i); // Add the product to the cart and verify the cart badge and button text
+            Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding product " + i);
+            Assert.assertEquals(productsPage.getCartBadgeItemCount(), i + 1, "Cart badge count mismatch after adding product " + i);
+            Assert.assertEquals(productsPage.getCartButtonText(i), TestData.REMOVE_BUTTON_TEXT, "Remove button text mismatch for product " + i);
+        }
+
+        for (int i = 0; i < productCount; i++) {
+            productsPage.removeProductFromCart(i); // Remove the product from the cart and verify the cart badge and button text
+            int expectedCount = productCount - (i + 1);
+            if (expectedCount == 0) {
+                Assert.assertFalse(productsPage.isCartBadgeDisplayed(), "Cart badge is still displayed after removing all products " + i);
+            } else {
+                Assert.assertTrue(productsPage.isCartBadgeDisplayed(), "Cart badge is not displayed after adding product " + i);
+            }
+            Assert.assertEquals(productsPage.getCartBadgeItemCount(), expectedCount, "Cart badge count mismatch after adding product " + i);
+            Assert.assertEquals(productsPage.getCartButtonText(i), TestData.ADD_TO_CART_BUTTON_TEXT, "Remove button text mismatch for product " + i);
+        }
+    }
+
+    @Test(testName = "TC010 - Verify sorting of products by Name (A to Z)")
+    public void testSortProductsByNameAToZ() {
+        productsPage.sortProducts(TestData.SORT_BY_NAME_ASC);
+        List<String> actualSortedNames = productsPage.getAllProductNames();
+        List<String> expectedSortedNames = productsPage.getProductNamesSortedAlphabetically(TestData.EXPECTED_PRODUCT_NAMES);
+        Assert.assertEquals(actualSortedNames, expectedSortedNames);
+    }
+
+    @Test(testName = "TC011 - Verify sorting of products by Name (Z to A)")
+    public void testSortProductsByNameZToA() {
+        productsPage.sortProducts(TestData.SORT_BY_NAME_DESC);
+        List<String> actualSortedNames = productsPage.getAllProductNames();
+        List<String> expectedSortedNames = productsPage.getProductNamesSortedReverseAlphabetically(TestData.EXPECTED_PRODUCT_NAMES);
+        Assert.assertEquals(actualSortedNames, expectedSortedNames);
+    }
+
+    @Test(testName = "TC012 - Verify sorting of products by Price (low to high)")
+    public void testSortProductsByPriceLowToHigh() {
+        productsPage.sortProducts(TestData.SORT_BY_PRICE_ASC);
+        List<String> actualSortedPrices = productsPage.getAllProductPrices();
+        List<String> expectedSortedPrices = productsPage.getProductPricesSortedLowToHigh(TestData.EXPECTED_PRODUCT_PRICES);
+        Assert.assertEquals(actualSortedPrices, expectedSortedPrices);
+    }
+
+    @Test(testName = "TC013 - Verify sorting of products by Price (high to low)")
+    public void testSortProductsByPriceHighToLow() {
+        productsPage.sortProducts(TestData.SORT_BY_PRICE_DESC);
+        List<String> actualSortedPrices = productsPage.getAllProductPrices();
+        List<String> expectedSortedPrices = productsPage.getProductPricesSortedHighToLow(TestData.EXPECTED_PRODUCT_PRICES);
+        Assert.assertEquals(actualSortedPrices, expectedSortedPrices);
     }
 }

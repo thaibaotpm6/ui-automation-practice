@@ -3,7 +3,9 @@ package com.saucedemo.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,6 +34,9 @@ public class ProductsPage extends BasePage {
 
     @FindBy(css = ".shopping_cart_badge")
     private WebElement cartBadge;
+
+    @FindBy(className = "product_sort_container")
+    private WebElement sortDropdown;
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -118,19 +123,21 @@ public class ProductsPage extends BasePage {
     }
 
     public List<String> getAllProductNames() {
-        return productNames.stream().map(WebElement::getText).collect(Collectors.toList());
+        return productNames.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public List<String> getAllproductDescriptions() {
-        return productDescriptions.stream().map(WebElement::getText).collect(Collectors.toList());
+        return productDescriptions.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public List<String> getAllProductPrices() {
-        return productPrices.stream().map(WebElement::getText).collect(Collectors.toList());
-    }
-
-    public int getAddToCartButtonCount() {
-        return addToCartButtons.size();
+        return productPrices.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
     }
 
     public void addProductToCart(int index) {
@@ -138,14 +145,59 @@ public class ProductsPage extends BasePage {
     }
 
     public boolean isCartBadgeDisplayed() {
-        return cartBadge.isDisplayed();
+        try {
+            return cartBadge.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-    public String getRemoveButtonText(int index) {
+    public String getCartButtonText(int index) {
         return addToCartButtons.get(index).getText();
     }
 
     public int getCartBadgeItemCount() {
-        return Integer.parseInt(cartBadge.getText());
+        try {
+            return Integer.parseInt(cartBadge.getText());
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public void removeProductFromCart(int index) {
+        addToCartButtons.get(index).click();
+    }
+
+    public void sortProducts(String sortOption) {
+        Select select = new Select(sortDropdown);
+        select.selectByVisibleText(sortOption);
+    }
+
+    public List<String> getProductNamesSortedAlphabetically(List<String> productNames) {
+        return productNames.stream()
+                .sorted(String.CASE_INSENSITIVE_ORDER)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getProductNamesSortedReverseAlphabetically(List<String> productNames) {
+        return productNames.stream()
+                .sorted(String.CASE_INSENSITIVE_ORDER.reversed())
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getProductPricesSortedLowToHigh(List<String> productPrices) {
+        return productPrices.stream()
+                .map(price -> Double.parseDouble(price.replace("$", "")))
+                .sorted()
+                .map(price -> "$" + price)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getProductPricesSortedHighToLow(List<String> productPrices) {
+        return productPrices.stream()
+                .map(price -> Double.parseDouble(price.replace("$", "")))
+                .sorted(Comparator.reverseOrder())
+                .map(price -> "$" + price)
+                .collect(Collectors.toList());
     }
 }
