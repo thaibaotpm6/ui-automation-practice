@@ -1,4 +1,4 @@
-package com.saucedemo.tests.login;
+package com.saucedemo.tests;
 
 import com.saucedemo.data.TestData;
 import com.saucedemo.utils.BaseTest;

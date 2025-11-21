@@ -1,6 +1,7 @@
 package com.saucedemo.utils;
 
 import com.saucedemo.pages.LoginPage;
+import com.saucedemo.pages.ProductDetailsPage;
 import com.saucedemo.pages.ProductsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ public class BaseTest {
     protected WebDriver driver;
     protected LoginPage loginPage;
     protected ProductsPage productsPage;
+    protected ProductDetailsPage productDetailsPage;
 
     @BeforeClass
     public void setUp() {

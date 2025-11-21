@@ -1,4 +1,4 @@
-package com.saucedemo.tests.products;
+package com.saucedemo.tests;
 
 import com.saucedemo.data.TestData;
 import com.saucedemo.utils.BaseTest;
@@ -136,7 +136,8 @@ public class ProductsTest extends BaseTest {
         productsPage.sortProducts(TestData.SORT_BY_NAME_DESC);
         List<String> actualSortedNames = productsPage.getAllProductNames();
         List<String> expectedSortedNames = productsPage.getProductNamesSortedReverseAlphabetically(TestData.EXPECTED_PRODUCT_NAMES);
-        Assert.assertEquals(actualSortedNames, expectedSortedNames, "Product names are not sorted alphabetically (Z to A)");    }
+        Assert.assertEquals(actualSortedNames, expectedSortedNames, "Product names are not sorted alphabetically (Z to A)");
+    }
 
     @Test(testName = "TC012 - Verify sorting of products by Price (low to high)")
     public void testSortProductsByPriceLowToHigh() {
@@ -151,5 +152,96 @@ public class ProductsTest extends BaseTest {
         productsPage.sortProducts(TestData.SORT_BY_PRICE_DESC);
         List<String> actualSortedPrices = productsPage.getAllProductPrices();
         List<String> expectedSortedPrices = productsPage.getProductPricesSortedHighToLow(TestData.EXPECTED_PRODUCT_PRICES);
-        Assert.assertEquals(actualSortedPrices, expectedSortedPrices, "Product prices are not sorted correctly (high to low)");    }
+        Assert.assertEquals(actualSortedPrices, expectedSortedPrices, "Product prices are not sorted correctly (high to low)");
+    }
+
+    @Test(testName = "TC014 - Click on product name navigates to details page")
+    public void testClickProductNameNavigatesToDetails() {
+        // Get expected values
+        String expectedProductName = productsPage.getProductName(0);
+        String expectedProductDesc = productsPage.getProductDescription(0);
+        String expectedProductPrice = productsPage.getProductPrice(0);
+
+        // Navigate to details page
+        productDetailsPage = productsPage.clickProductName(0);
+
+        // Validate details page UI
+//        Assert.assertTrue(productDetailsPage.isBackToProductsButtonAccessible(), "Back to Products button is not accessible on the product details page");
+//        Assert.assertTrue(productDetailsPage.isProductNameDisplayed(), "Product name is not displayed on the product details page");
+//        Assert.assertTrue(productDetailsPage.isProductDescDisplayed(), "Product description is not displayed on the product details page");
+//        Assert.assertTrue(productDetailsPage.isProductImgDisplayed(), "Product image is not displayed on the product details page");
+//        Assert.assertTrue(productDetailsPage.isProductPriceDisplayed(), "Product price is not displayed on the product details page");
+//        Assert.assertTrue(productDetailsPage.isAddToCartButtonAccessible(), "Add to Cart button is not accessible on the product details page");
+        Assert.assertTrue(productDetailsPage.isUIComplete(), "Product details UI is incomplete");
+
+        // Get actual values from details page
+        String actualProductName = productDetailsPage.getProductName();
+        String actualProductDesc = productDetailsPage.getProductDescription();
+        String actualProductPrice = productDetailsPage.getProductPrice();
+
+        // Compare values
+        Assert.assertEquals(actualProductName, expectedProductName, "Mismatch in product name for product");
+        Assert.assertEquals(actualProductDesc, expectedProductDesc, "Mismatch in product description for product" );
+        Assert.assertEquals(actualProductPrice, expectedProductPrice, "Mismatch in product price for product");
+
+        // Navigate back
+        productsPage = productDetailsPage.clickBackToProductsButton();
+    }
+
+    @Test(testName = "TC015 - Click on product image navigates to details page")
+    public void testClickProductImageNavigatesToDetails() {
+        // Get expected values
+        String expectedProductName = productsPage.getProductName(0);
+        String expectedProductDesc = productsPage.getProductDescription(0);
+        String expectedProductPrice = productsPage.getProductPrice(0);
+
+        // Navigate to details page
+        productDetailsPage = productsPage.clickProductImage(0);
+
+        // Validate details page UI
+        Assert.assertTrue(productDetailsPage.isUIComplete(), "Product details UI is incomplete");
+
+        // Get actual values from details page
+        String actualProductName = productDetailsPage.getProductName();
+        String actualProductDesc = productDetailsPage.getProductDescription();
+        String actualProductPrice = productDetailsPage.getProductPrice();
+
+        // Compare values
+        Assert.assertEquals(actualProductName, expectedProductName, "Mismatch in product name for product");
+        Assert.assertEquals(actualProductDesc, expectedProductDesc, "Mismatch in product description for product" );
+        Assert.assertEquals(actualProductPrice, expectedProductPrice, "Mismatch in product price for product");
+
+        // Navigate back
+        productsPage = productDetailsPage.clickBackToProductsButton();
+    }
+
+    @Test(testName = "TC016 - Verify clicking all product names navigates to details page")
+    public void testClickAllProductNamesNavigation() {
+        int productCount = productsPage.getProductCount();
+        for (int i = 0; i < productCount; i++) {
+            // Get expected values
+            String expectedProductName = productsPage.getProductName(i);
+            String expectedProductDesc = productsPage.getProductDescription(i);
+            String expectedProductPrice = productsPage.getProductPrice(i);
+
+            // Navigate to details page
+            productDetailsPage = productsPage.clickProductName(i);
+
+            // Validate details page UI
+            Assert.assertTrue(productDetailsPage.isUIComplete(), "Product details UI is incomplete");
+
+            // Get actual values from details page
+            String actualProductName = productDetailsPage.getProductName();
+            String actualProductDesc = productDetailsPage.getProductDescription();
+            String actualProductPrice = productDetailsPage.getProductPrice();
+
+            // Compare values
+            Assert.assertEquals(actualProductName, expectedProductName, "Mismatch in product name for product index " + i);
+            Assert.assertEquals(actualProductDesc, expectedProductDesc, "Mismatch in product description for product index " + i);
+            Assert.assertEquals(actualProductPrice, expectedProductPrice, "Mismatch in product price for product index " + i);
+
+            // Navigate back
+            productsPage = productDetailsPage.clickBackToProductsButton();
+        }
+    }
 }

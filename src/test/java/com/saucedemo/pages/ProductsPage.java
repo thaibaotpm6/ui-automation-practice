@@ -32,6 +32,9 @@ public class ProductsPage extends BasePage {
     @FindBy(css = "img.inventory_item_img")
     private List<WebElement> productImages;
 
+    @FindBy(css = ".inventory_item_img a")
+    private List<WebElement> productImageLinks;
+
     @FindBy(css = ".shopping_cart_badge")
     private WebElement cartBadge;
 
@@ -199,5 +202,27 @@ public class ProductsPage extends BasePage {
                 .sorted(Comparator.reverseOrder())
                 .map(price -> "$" + price)
                 .collect(Collectors.toList());
+    }
+
+    public ProductDetailsPage clickProductName(int index) {
+        productNames.get(index).click();
+        return new ProductDetailsPage(driver);
+    }
+
+    public ProductDetailsPage clickProductImage(int index) {
+        productImageLinks.get(index).click();
+        return new ProductDetailsPage(driver);
+    }
+
+    public String getProductName(int index) {
+        return productNames.get(index).getText();
+    }
+
+    public String getProductDescription(int index) {
+        return productDescriptions.get(index).getText();
+    }
+
+    public String getProductPrice(int index) {
+        return productPrices.get(index).getText();
     }
 }
