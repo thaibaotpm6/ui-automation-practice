@@ -39,4 +39,7 @@ public class TestData {
     public static final String SORT_BY_NAME_DESC = "Name (Z to A)";
     public static final String SORT_BY_PRICE_ASC = "Price (low to high)";
     public static final String SORT_BY_PRICE_DESC = "Price (high to low)";
+
+    // Product details data
+    public static final String BACK_TO_PRODUCTS_TEXT = "Back to products";
 }

@@ -23,6 +23,12 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(className = "btn_inventory")
     private WebElement addToCartButton;
 
+    @FindBy(className = "shopping_cart_badge")
+    WebElement cartBadge;
+
+    @FindBy(css = "#remove")
+    WebElement removeButton;
+
     public ProductDetailsPage(WebDriver driver) {
         super(driver);
     }
@@ -81,5 +87,41 @@ public class ProductDetailsPage extends BasePage {
                 && isProductImgDisplayed()
                 && isAddToCartButtonAccessible()
                 && isBackToProductsButtonAccessible();
+    }
+
+    public void addProductToCart() {
+        addToCartButton.click();
+    }
+
+    public String getAddToCartButtonText() {
+        return addToCartButton.getText();
+    }
+
+    public String getBackToProductsText() {
+        return backToProducts.getText();
+    }
+
+    public int getCartItemCount() {
+        try {
+            return Integer.parseInt(cartBadge.getText());
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public String getRemoveButtonText() {
+        return removeButton.getText();
+    }
+
+    public boolean isCartBadgeDisplayed() {
+        try {
+            return cartBadge.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void removeProductFromCart() {
+        removeButton.click();
     }
 }

@@ -244,4 +244,34 @@ public class ProductsTest extends BaseTest {
             productsPage = productDetailsPage.clickBackToProductsButton();
         }
     }
+
+    @Test(testName = "TC017 - Verify clicking all product images navigates to details page")
+    public void testClickAllProductImagesNavigation() {
+        int productCount = productsPage.getProductCount();
+        for (int i = 0; i < productCount; i++) {
+            // Get expected values
+            String expectedProductName = productsPage.getProductName(i);
+            String expectedProductDesc = productsPage.getProductDescription(i);
+            String expectedProductPrice = productsPage.getProductPrice(i);
+
+            // Navigate to details page
+            productDetailsPage = productsPage.clickProductImage(i);
+
+            // Validate details page UI
+            Assert.assertTrue(productDetailsPage.isUIComplete(), "Product details UI is incomplete");
+
+            // Get actual values from details page
+            String actualProductName = productDetailsPage.getProductName();
+            String actualProductDesc = productDetailsPage.getProductDescription();
+            String actualProductPrice = productDetailsPage.getProductPrice();
+
+            // Compare values
+            Assert.assertEquals(actualProductName, expectedProductName, "Mismatch in product name for product index " + i);
+            Assert.assertEquals(actualProductDesc, expectedProductDesc, "Mismatch in product description for product index " + i);
+            Assert.assertEquals(actualProductPrice, expectedProductPrice, "Mismatch in product price for product index " + i);
+
+            // Navigate back
+            productsPage = productDetailsPage.clickBackToProductsButton();
+        }
+    }
 }
